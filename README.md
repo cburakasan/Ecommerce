@@ -1,40 +1,42 @@
-## itelligence Hackathon December 2020
 
----
-## IMPORTANT NOTICE
-In the hackathon you will be asked to add features to this inital sample project. It is good to make practices on how to add new features to the project. 
+# itelligence Hackathon Aralık 2020
+Elinizdeki projede basit bir e-ticaret uygulaması çalışmaktadır. Bu projedeki 10 adet ürünün fiyat, ürün adı ve resmi proje açılışında veri tabanında oluşturulmaktadır. Projede ürünlerin belirli bir miktarda sepete eklenmesi, sepetten çıkarılması, sepetin siparişe dönüştürülmesi gerçekleştirilebiliyor.
+ 
+Hackathon kapsamında bu proje üzerinde ek geliştirmeler yapmanızı bekliyoruz.
 
-This project is based on the example provided by baeldung website only with some differences on pom.xml.
+## Kapsam
+- Home butonundaki resetleme işinin Checkout butonu altında “Clear Shopping Cart” butonu oluşturarak oraya taşınması. Home butonunun ana ürün listesine dönecek şekilde revize edilmesi.
+- Ürün detayları yapısı. Bunun için ürün üzerinde açıklama, marka ve kategori alanlarını açıp bunların gösterilmesi.
+- Kategori yapısı (Basit olması açısından sadece tek bir üst kategori olacağı var sayılabilir)
+- Navigasyonda belirlenecek kategorilere tıklandığında o kategoriye ait ürünlerin getirilmesi. (Her kategori altına en az bir ürün olmak zorundadır.)
+- Üyelik ve giriş yapısı.
+- Sitenin logosuna tıklandığı tüm ürünler listelenmelidir.
+- Ürünlere yorum ve puan ekleme (Sadece üye girişi yapıldığında)
+- Ürünlerdeki yorum ve puanların görüntülenmesi, ortalama puan hesaplanması.
+- Favori Ürün ekleme-listeleme
+ 
+## Bonus
+- Cookie ile birlikte İletişim İzni kontrolü
+- Ürün detay sayfalarında, İlişkili Ürün gösterimi (Bu ürünü gezenler, bunları da görüntüledi şeklindeki widget yapıları)
+- Ürün arama formu
+- Ürün detay sayfasında görüntülenebilecek “bedava kargo”, “hızlı teslimat” vs gibi rozetler için bir yapı kurulması ve bunların gösterimi
 
----
+## Kurallar
+- Projede ekip çalışması yapılması gerekmektedir.
+- Aranızdan seçeceğiniz bir kişi ekip sorumlusu olacaktır.
+- Proje süresi 12 saattir
+- Projeye başlamadan önce tüm kurulumların yapılması gerekmektedir.
 
-This example project is ready to install and run. You should be able to run the project without performing steps in the tutorial. Some notes to keep in mind:
-
-- You can use any IDE you're comfortable with. An IDE which has SpringBoot support (e.g. Eclipse with a Spring plugin, IntelliJ Ultimate) may be helpful but not mandatory since the project can run like a Java application.
-- Start the Angular application with `npm start` instead `ng serve`.
-- For database, application logs something similar to the following during startup
-
-```
-[main] INFO  com.zaxxer.hikari.HikariDataSource - ecommercedb - Starting...
-[main] INFO  com.zaxxer.hikari.HikariDataSource - ecommercedb - Start completed.
-[main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:85ce7be1-58c6-42de-bd8f-b45698a1961c'
-```
-You should be able to connect to the DB from http://localhost:8080/h2-console/ with the destination specified at the log starts with `jdbc:h2:mem`
-
-![H2-console](readme-images/h2-console.png)
-![H2-DBs](readme-images/h2-db.png)
-
-- After installing the project, you should be able to see the frontend at http://localhost:4200/ with all functions (e.g, adding to cart, removing from cart etc.) successfully.
-
-![frontend-angular](readme-images/frontend-angular.png)
-
-# Original README.md
-
->## Spring Boot Angular
->
->This module contains articles about Spring Boot with Angular
->
->### Relevant Articles:
->
->- [Building a Web Application with Spring Boot and Angular](https://www.baeldung.com/spring-boot-angular-web)
->- [A Simple E-Commerce Implementation with Spring](https://www.baeldung.com/spring-angular-ecommerce)
+ 
+## Teknoloji
+ 
+### Frontend
+- Angular
+- Bootstrap
+ 
+### Backend
+- Java 8+
+- SpringBoot
+- Form yapılarının oluşturulmasında Object Oriented temelleri esas alınmalıdır.
+- Form aksiyonları POST ve GET alt yapısı ile hazırlanmalıdır.
+- Java layered architecture yapısına uygun geliştirme yapılmalıdır.      
