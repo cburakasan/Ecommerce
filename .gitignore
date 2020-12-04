@@ -1,0 +1,4 @@
+src/**/node_modules/
+target/
+.idea/
+spring-boot-angular.iml
