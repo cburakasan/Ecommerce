@@ -71,11 +71,13 @@ public class ProductService {
             log.info("Product detail basarili");
 
             Long userId = productRequestDto.getUserId();
-            Optional<User> optionalUser = userRepositroy.findById(userId);
-            if(optionalUser.isPresent()){
-                User user = optionalUser.get();
-                boolean kargoBedava = isKargoBedava(product, user);
-                productResponseDto.setKargoBedava(kargoBedava);
+            if (userId != null) {
+                Optional<User> optionalUser = userRepositroy.findById(userId);
+                if (optionalUser.isPresent()) {
+                    User user = optionalUser.get();
+                    boolean kargoBedava = isKargoBedava(product, user);
+                    productResponseDto.setKargoBedava(kargoBedava);
+                }
             }
 
             return productResponseDto;
@@ -92,7 +94,7 @@ public class ProductService {
     private boolean isKargoBedava(Product product, User user) {
         boolean isKargoBedava = false;
         List<Favori> favoriList = favoriRepository.findAllByProductAndUser(product, user);
-        if(favoriList !=null){
+        if (favoriList != null && favoriList.size() >0) {
             isKargoBedava = true;
 
         }
@@ -106,7 +108,7 @@ public class ProductService {
         try {
             String kategori = productRequestDto.getKategori();
             List<Product> productList = productsRepository.findAllByKategori(kategori);
-            if (productList.size() == 0 ) {
+            if (productList.size() == 0) {
                 throw new ProductException("Bu kateogride ürün bulunamadi", new Exception());
             }
             for (Product product : productList) {

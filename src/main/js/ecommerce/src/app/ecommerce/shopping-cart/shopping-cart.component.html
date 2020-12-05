@@ -14,5 +14,9 @@
         <button class="btn btn-light btn-block" (click)="finishOrder()"
                 [disabled]="orders.productOrders.length == 0">Checkout
         </button>
+        <button class="btn btn-light btn-block" (click)="reset()"
+                [disabled]="orders.productOrders.length == 0">Clear Shopping Cart
+        </button>
+
     </div>
 </div>

@@ -24,5 +24,10 @@ public class Comment implements Serializable {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_user", foreignKey = @ForeignKey(name = "FK_Comment_User"))
     private User user;
+
+    @Column
+    private String yorum;
 }
+
+
 

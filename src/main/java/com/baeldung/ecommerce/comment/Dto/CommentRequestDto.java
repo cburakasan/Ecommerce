@@ -9,6 +9,7 @@ import java.io.Serializable;
 public class CommentRequestDto implements Serializable {
     private Long productId;
     private Long userId;
+    private String yorum;
 
 
 }

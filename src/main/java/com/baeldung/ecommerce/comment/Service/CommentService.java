@@ -32,6 +32,7 @@ public class CommentService {
         try {
             Long productId = commentRequestDto.getProductId();
             Long userId = commentRequestDto.getUserId();
+            String yorum = commentRequestDto.getYorum();
 
             Optional<Product> productOptional = productRepository.findById(productId);
             Product product = productOptional.get();
@@ -42,6 +43,7 @@ public class CommentService {
             Comment comment = new Comment();
             comment.setProduct(product);
             comment.setUser(user);
+            comment.setYorum(yorum);
             commentRepository.save(comment);
 
         }catch (Exception e){
