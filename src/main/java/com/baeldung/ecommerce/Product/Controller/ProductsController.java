@@ -22,12 +22,12 @@ public class ProductsController {
 //        return productService.productSave(productRequestDto);
 //    }
 
-    @PostMapping("/detail")
+    @GetMapping("/detail")
     public ProductResponseDto productDetail(@RequestBody ProductRequestDto productRequestDto){
       return productService.productDetail(productRequestDto);
     }
 
-    @PostMapping("/findAllProductsByKategori")
+    @GetMapping("/findAllProductsByKategori")
     public ProductListResponsetDto findAllProductsByKategori(@RequestBody ProductRequestDto productRequestDto){
         return productService.findAllProductsByKategori(productRequestDto);
     }

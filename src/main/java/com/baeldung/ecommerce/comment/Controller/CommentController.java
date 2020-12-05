@@ -14,7 +14,7 @@ public class CommentController {
     @Autowired
     CommentService commentService;
 
-    @PostMapping("/ekle")
+    @GetMapping("/ekle")
     public CommentResponseDto commentEkle(@RequestBody CommentRequestDto commentRequestDto){
         return commentService.yorumEkle(commentRequestDto);
     }

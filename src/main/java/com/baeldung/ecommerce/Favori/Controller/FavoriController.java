@@ -16,12 +16,12 @@ public class FavoriController {
     @Autowired
     FavoriService favoriService;
 
-    @PostMapping("/ekle")
+    @GetMapping("/ekle")
     public FavoriEkleResponseDto favoriEkle(@RequestBody FavoriEkleRequestDto favoriRequestDto){
         return favoriService.favoriEkle(favoriRequestDto);
     }
 
-    @PostMapping("/listele")
+    @GetMapping("/listele")
     public FavoriGosterResponseDto favoriGoster(@RequestBody FavoriGosterRequestDto favoriGosterRequestDto){
         return favoriService.favoriGoster(favoriGosterRequestDto);
     }

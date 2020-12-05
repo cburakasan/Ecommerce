@@ -14,11 +14,11 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @PostMapping(value = "/register")
+    @GetMapping(value = "/register")
     public UserResponseDto userRegister(@RequestBody UserRequestDto userRequestDto){
        return userService.userRegister(userRequestDto);
     }
-    @PostMapping("/login")
+    @GetMapping("/login")
     public UserResponseDto userLogin(@RequestBody UserRequestDto userRequestDto){
 
         return userService.userGiris(userRequestDto);

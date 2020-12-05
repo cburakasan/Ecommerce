@@ -16,7 +16,7 @@ public class OrderController {
     @Autowired
     OrderService orderService;
 
-    @PostMapping("/create")
+    @GetMapping("/create")
     public OrderProductUserResponsetDto createOrderWithProductUser(@RequestBody OrderProductUserRequestDto orderProductUserRequestDto){
        return orderService.createOrderWithProductUser(orderProductUserRequestDto);
 
