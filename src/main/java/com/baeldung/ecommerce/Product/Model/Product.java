@@ -24,14 +24,14 @@ public class Product {
     private Double price;
     @Column
     private String pictureUrl;
-    @Enumerated(value = EnumType.STRING)
-    private Kategori kategori;
+    @Column
+    private String kategori;
     @Column
     private String marka;
     @Column
     private String aciklama;
 
-    public Product(Long id, @NotNull(message = "Product name is required.") String name, Double price, String pictureUrl, Kategori kategori, String marka, String aciklama) {
+    public Product(Long id, @NotNull(message = "Product name is required.") String name, Double price, String pictureUrl, String kategori, String marka, String aciklama) {
         this.id = id;
         this.name = name;
         this.price = price;

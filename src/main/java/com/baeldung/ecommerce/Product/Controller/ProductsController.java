@@ -1,5 +1,6 @@
 package com.baeldung.ecommerce.Product.Controller;
 
+import com.baeldung.ecommerce.Product.Dto.ProductListResponsetDto;
 import com.baeldung.ecommerce.Product.Dto.ProductRequestDto;
 import com.baeldung.ecommerce.Product.Dto.ProductResponseDto;
 import com.baeldung.ecommerce.Product.Dto.ProductDto;
@@ -24,6 +25,11 @@ public class ProductsController {
     @PostMapping("/detail")
     public ProductResponseDto productDetail(@RequestBody ProductRequestDto productRequestDto){
       return productService.productDetail(productRequestDto);
+    }
+
+    @PostMapping("/findAllProductsByKategori")
+    public ProductListResponsetDto findAllProductsByKategori(@RequestBody ProductRequestDto productRequestDto){
+        return productService.findAllProductsByKategori(productRequestDto);
     }
 
     @GetMapping("/getList")

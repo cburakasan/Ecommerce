@@ -8,5 +8,6 @@ import java.io.Serializable;
 public class ProductRequestDto implements Serializable {
     private String kategori;;
     private Long productId;
+    private Long userId;
 
 }

@@ -16,7 +16,7 @@ public class ProductDto {
     private String name;
     private Double price;
     private String pictureUrl;
-    private Kategori kategori;
+    private String kategori;
     private String marka;
     private String aciklama;
 }

@@ -7,7 +7,7 @@ import java.io.Serializable;
 public class FavoriUrunDto implements Serializable {
     private String name;
     private String pictureUrl;
-    private Kategori kategori;
+    private String kategori;
     private String marka;
     private String aciklama;
     private Long id;
