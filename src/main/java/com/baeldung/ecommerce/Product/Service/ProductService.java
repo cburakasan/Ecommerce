@@ -68,9 +68,8 @@ public class ProductService {
     }
 
 
-    public ProductListResponsetDto getProductList() {
+    public List<ProductDto> getProductList() {
 
-        ProductListResponsetDto productListResponsetDto = new ProductListResponsetDto();
         List<ProductDto> productDtoList = new ArrayList<>();
         try {
             List<Product> productList = productsRepository.findAll();
@@ -93,13 +92,12 @@ public class ProductService {
                 productDtoList.add(productDto);
 
             }
-            productListResponsetDto.setProductList(productDtoList);
         } catch (Exception e) {
             String message = e.getMessage();
             log.error(message, e);
         }
         log.info("Product listeleme basarili");
-        return productListResponsetDto;
+        return productDtoList;
 
     }
 
