@@ -1,9 +1,8 @@
 package com.baeldung.ecommerce.Product.Controller;
 
-import com.baeldung.ecommerce.Product.Dto.ProductListResponsetDto;
 import com.baeldung.ecommerce.Product.Dto.ProductRequestDto;
 import com.baeldung.ecommerce.Product.Dto.ProductResponseDto;
-import com.baeldung.ecommerce.Product.Model.ProductDto;
+import com.baeldung.ecommerce.Product.Dto.ProductDto;
 import com.baeldung.ecommerce.Product.Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

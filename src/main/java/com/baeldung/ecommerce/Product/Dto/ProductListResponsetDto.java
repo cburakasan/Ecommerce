@@ -1,7 +1,5 @@
 package com.baeldung.ecommerce.Product.Dto;
 
-import com.baeldung.ecommerce.Product.Model.Product;
-import com.baeldung.ecommerce.Product.Model.ProductDto;
 import lombok.Data;
 
 import java.util.List;
