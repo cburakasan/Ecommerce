@@ -1,4 +1,4 @@
-package com.baeldung.ecommerce.Product.Model;
+package com.baeldung.ecommerce.Product.Dto;
 
 import com.baeldung.ecommerce.Product.Kategori;
 import lombok.Data;

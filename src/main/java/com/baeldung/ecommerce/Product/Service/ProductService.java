@@ -1,12 +1,11 @@
 package com.baeldung.ecommerce.Product.Service;
 
-import com.baeldung.ecommerce.Product.Dto.ProductListResponsetDto;
 import com.baeldung.ecommerce.Product.Dto.ProductRequestDto;
 import com.baeldung.ecommerce.Product.Dto.ProductResponseDto;
 import com.baeldung.ecommerce.Product.Exception.ProductException;
 import com.baeldung.ecommerce.Product.Kategori;
 import com.baeldung.ecommerce.Product.Model.Product;
-import com.baeldung.ecommerce.Product.Model.ProductDto;
+import com.baeldung.ecommerce.Product.Dto.ProductDto;
 import com.baeldung.ecommerce.Product.Repository.ProductsRepository;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;

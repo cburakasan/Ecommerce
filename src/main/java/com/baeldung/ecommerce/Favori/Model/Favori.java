@@ -15,11 +15,11 @@ public class Favori implements Serializable {
     @Column
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_product", foreignKey = @ForeignKey(name = "FK_Favori_Product"))
     private Product product;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_user", foreignKey = @ForeignKey(name = "FK_Favori_User"))
     private User user;
 }
